@@ -1,0 +1,44 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "MRX-1",
+      "type": "Router",
+      "family": "ICOM_OS",
+      "status": "Active",
+      "connectionStatus": "Online",
+      "lastConnectionAt": "01-01-1970T00:00:00Z",
+      "ipv4Address": "198.18.0.60"
+    },
+    {
+      "id": 2,
+      "name": "SCR-2",
+      "type": "Router",
+      "family": "ICOM_OS",
+      "status": "Disabled",
+      "connectionStatus": "Offline",
+      "lastConnectionAt": "",
+      "ipv4Address": "198.18.0.62"
+    },
+    {
+      "id": 3,
+      "name": "ECR-3",
+      "type": "Router",
+      "family": "ICOM_OS",
+      "status": "Unlicensed",
+      "connectionStatus": "Offline",
+      "lastConnectionAt": "",
+      "ipv4Address": "198.18.0.64"
+    },
+    {
+      "id": 4,
+      "name": "PC-4",
+      "type": "Terminal",
+      "family": "",
+      "status": "Active",
+      "connectionStatus": "Online",
+      "lastConnectionAt": "01-01-1970T00:00:00Z",
+      "ipv4Address": "198.18.0.66"
+    }
+  ]
+}
