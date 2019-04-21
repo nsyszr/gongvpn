@@ -1,14 +1,27 @@
 <template>
-  <v-card class="elevation-0">
-    <v-toolbar class="elevation-0" dense card color="transparent">
-      <v-toolbar-title class="primary--text">VPN-Clients</v-toolbar-title>
+  <v-card class="elevation-2">
+    <v-toolbar class="elevation-0" card color="transparent">
+      <v-toolbar-title>Clients</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat small color="primary" @click="readonly=false" :disabled="loading">
-        <v-icon color="primary">add</v-icon>
-        <span>Add</span>
+      <v-btn icon>
+        <v-icon>filter_list</v-icon>
       </v-btn>
+      <v-btn icon @click="refresh">
+        <v-icon>refresh</v-icon>
+      </v-btn>
+      <v-menu bottom left>
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on">
+            <v-icon>more_vert</v-icon>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-tile @click="addApplicationModal=true">
+            <v-list-tile-title>Add</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar>
-    <v-divider></v-divider>
     <v-container fluid grid-list-xl style="padding: 0;">
       <v-layout row wrap align-center>
         <v-flex xs12>

@@ -33,7 +33,7 @@
 
     <!-- End of Fatal Error Modal -->
 
-    <v-navigation-drawer clipped v-model="drawer" fixed app light>
+    <v-navigation-drawer clipped v-model="drawer" fixed app dark>
       <v-list dense>
         <v-list-tile to="/">
           <v-list-tile-action>
@@ -53,7 +53,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar clipped-left color="primary" dark fixed app dense class="elevation-0">
+    <v-toolbar clipped-left color="white" light fixed app class="elevation-2">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>
         <img class="toolbar-icon" src="./assets/icom_logo.svg" alt>
@@ -140,13 +140,13 @@
       <!-- </keep-alive>
       </transition>-->
     </v-content>
-    <v-footer dark fixed app>
+    <!-- <v-footer dark fixed app>
       <span>&copy; 2019 INSYS MICROELECTRONICS GmbH</span>
       <v-spacer></v-spacer>
       <a href="https://www.insys-icom.com/legal-notice" _target="_blank">Legal Notice</a>
       <a href="https://www.insys-icom.com/data-protection" _target="_blank">Data protection</a>
       <a href="https://www.insys-icom.com/products/customer-services" _target="_blank">Hotline</a>
-    </v-footer>
+    </v-footer>-->
   </v-app>
 </template>
 
@@ -195,7 +195,7 @@ export default {
       );
     },
     title: () => {
-      var title = "Smart IoT Console - VPN";
+      var title = "Smart IoT VPN";
       if (
         process.env.VUE_APP_DEV_MODE &&
         process.env.VUE_APP_DEV_MODE === "yes"
@@ -219,10 +219,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .toolbar-icon {
   margin-top: 8px;
-  height: 48px;
+  height: 60px;
+}
+
+.nav {
+  background-color: #262626;
+}
+
+.nav-active {
+  background-color: #00a5db;
+  color: #fff;
 }
 
 .theme--light.application {
